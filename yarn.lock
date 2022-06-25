@@ -2534,10 +2534,10 @@
     dns-packet "^5.2.1"
     js-sha3 "^0.8.0"
 
-"@ensdomains/ui@^3.3.37":
-  version "3.3.37"
-  resolved "https://registry.npmmirror.com/@ensdomains/ui/-/ui-3.3.37.tgz#f61bb041e8351a513605f78e6f73240cf7b8e208"
-  integrity sha512-uzoG7m8yxJpI3JOFHE0blIqmtnwqGOoEnN6KiGSXE74THjNZRxTtLDOZ/BxHXf7/U5CkrpmVS93Cf3rQwiHZBQ==
+"@ensdomains/ui@^3.4.1":
+  version "3.4.1"
+  resolved "https://registry.npmmirror.com/@ensdomains/ui/-/ui-3.4.1.tgz#78be0e81f906f3b6a1020985b99ced6654e801f2"
+  integrity sha512-AQ9E/s7WHRjsn5MocBSGkwU+7UdAYcCGvGjlJ30iSJiw6T1L1l49hSnzvIC6XSNC4ri83bSPllabpZaxNxTvjg==
   dependencies:
     "@0xproject/utils" "^2.0.2"
     "@babel/plugin-proposal-class-properties" "^7.8.3"
