@@ -25,12 +25,12 @@ export const setWeb3ProviderLocalMutation = async provider => {
   }
 
   provider?.on('chainChanged', _chainId => {
-    console.log('chain changed: ', _chainId)
+    // console.log('chain changed: ', _chainId)
     setNetworkIdLocalMutation(parseInt(_chainId))
   })
 
   provider?.on('accountsChanged', async accounts => {
-    console.log('accounts changed')
+    // console.log('accounts changed')
   })
 
   return provider

@@ -250,7 +250,7 @@ function Editable({
 
   useEffect(() => {
     setCoinOptions(globalUtils.getCoinOptions())
-    console.log('coinOptions =', coinOptions)
+    // console.log('coinOptions =', coinOptions)
   }, [])
 
   return (

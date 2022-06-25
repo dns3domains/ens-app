@@ -73,7 +73,7 @@ function SingleName({
     }
   }, [searchTerm, isENSReady])
 
-  console.log('valid, data =', valid, loading, error, data)
+  // console.log('valid, data =', valid, loading, error, data)
 
   if (valid) {
     if (loading) return <Loader large center />

@@ -5,8 +5,8 @@ injectGlobal`
     box-sizing: border-box;
   }
   body {
-    font-family: Overpass;
-    background: #F0F6FA;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: #F4F0dd;
     margin: 0;
   }
 
@@ -20,7 +20,7 @@ injectGlobal`
     }
 
     &:visited {
-      color: #5284ff
+      color: #333333
     } 
   }
 `

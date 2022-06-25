@@ -347,11 +347,11 @@ const NameRegisterDataWrapper = props => {
 
   if (loading) return <Loader withWrap={true} large />
   if (error) {
-    console.log(error)
+    console.error(error)
   }
   const { getMinimumCommitmentAge } = data
 
-  console.log('组件NameRegisterDataWrapper', props, getMinimumCommitmentAge)
+  // console.log('组件NameRegisterDataWrapper', props, getMinimumCommitmentAge)
 
   return <NameRegister waitTime={getMinimumCommitmentAge} {...props} />
 }

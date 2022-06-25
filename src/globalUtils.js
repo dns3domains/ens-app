@@ -26,11 +26,11 @@ export const globalUtils = {
   getPlaceholderRecords: function() {
     const theEnsConfig = ensConfig.ens[globalUtils.currentChainId]
 
-    console.log(
-      'globalUtils.getPlaceholderRecords()',
-      globalUtils.currentChainId,
-      theEnsConfig
-    )
+    // console.log(
+    //   'globalUtils.getPlaceholderRecords()',
+    //   globalUtils.currentChainId,
+    //   theEnsConfig
+    // )
 
     if (theEnsConfig) {
       return theEnsConfig.placeholderRecords
@@ -41,11 +41,11 @@ export const globalUtils = {
   getCoinOptions: function() {
     const theEnsConfig = ensConfig.ens[globalUtils.currentChainId]
 
-    console.log(
-      'globalUtils.getCoinOptions()',
-      globalUtils.currentChainId,
-      theEnsConfig
-    )
+    // console.log(
+    //   'globalUtils.getCoinOptions()',
+    //   globalUtils.currentChainId,
+    //   theEnsConfig
+    // )
 
     if (theEnsConfig) {
       return theEnsConfig.placeholderRecords.sort().map(key => ({

@@ -191,7 +191,7 @@ const Domain = ({
   setSelectAll,
   hasInvalidCharacter
 }) => {
-  console.log('DomainItem: ', Array.from(domain.name))
+  // console.log('DomainItem: ', Array.from(domain.name))
   if (loading) {
     return (
       <DomainContainer state={'Owned'} className={className} to="">

@@ -89,11 +89,11 @@ function Name({ details: domain, name, pathname, type, refetch }) {
   const isDeedOwner = domain.deedOwner === account
   const isRegistrant = !domain.available && domain.registrant === account
 
-  console.log(
-    'domain.available, domain.parent =',
-    domain.available,
-    domain.parent
-  )
+  // console.log(
+  //   'domain.available, domain.parent =',
+  //   domain.available,
+  //   domain.parent
+  // )
 
   const registrationOpen = isRegistrationOpen(domain.available, domain.parent)
   const preferredTab = registrationOpen ? 'register' : 'details'

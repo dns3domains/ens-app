@@ -48,7 +48,7 @@ export default function RequestCertificate({ domain, value }) {
           }
         })
         .catch(e => {
-          console.log('checkCertificate error', { e })
+          console.error('checkCertificate error', { e })
         })
     },
     timerRunning ? 3000 : null

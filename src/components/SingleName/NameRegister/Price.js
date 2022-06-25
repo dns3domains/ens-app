@@ -53,7 +53,7 @@ const Price = ({
   let ethPrice = <InlineLoader />
   let withPremium, c
 
-  console.log('是否需求域名价格', loading, price, ethUsdPrice)
+  // console.log('是否需求域名价格', loading, price, ethUsdPrice)
 
   if (!loading && price && ethUsdPrice) {
     c = priceCalculator({
@@ -62,7 +62,7 @@ const Price = ({
       ethUsdPrice
     })
 
-    console.log('域名价格', c)
+    // console.log('域名价格', c)
 
     ethPrice = c.price
     if (underPremium) {

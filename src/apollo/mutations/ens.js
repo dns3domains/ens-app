@@ -30,11 +30,11 @@ export async function setup({
     option.infura = INFURA_ID
   }
 
-  console.error('最终参数option', option)
+  // console.log('最终参数option', option)
 
   const ensResult = await setupENS(option)
 
-  console.log('返回结果ensResult', ensResult)
+  // console.log('返回结果ensResult', ensResult)
 
   const {
     ens: ensInstance,
@@ -47,7 +47,7 @@ export async function setup({
   ensRegistryAddress = ensAddress
   globalUtils.currentChainId = network.chainId
 
-  console.log('network =', network)
+  // console.log('network =', network)
 
   isENSReadyReactive(true)
   return { ens, registrar, providerObject }

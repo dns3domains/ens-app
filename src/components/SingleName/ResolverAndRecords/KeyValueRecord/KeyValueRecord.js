@@ -108,7 +108,7 @@ const Editable = ({
   const isValid = validator(record)
   const isValidating = validating(record)
 
-  console.log('Editable()', key, value, editing)
+  // console.log('Editable()', key, value, editing)
 
   return (
     <KeyValueItem editing={editing} hasRecord={true} noBorder>
@@ -163,7 +163,7 @@ function Record(props) {
     domain,
     validating
   } = props
-  console.log('Record() props =', props)
+  // console.log('Record() props =', props)
 
   const { key, value } = record
 
@@ -248,7 +248,7 @@ function Records({
 }
 
 export default function KeyValueRecord(props) {
-  console.log('KeyValueRecord() props.records =', props)
+  // console.log('KeyValueRecord() props.records =', props)
 
   if (props.loading) return null
   return <Records {...props} />

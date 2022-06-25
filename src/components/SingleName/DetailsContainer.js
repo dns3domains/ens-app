@@ -443,7 +443,7 @@ function DetailsContainer({
                           setLoading(false)
                         })
                         .catch(err => {
-                          console.log('failed to refetch', err)
+                          console.error('failed to refetch', err)
                         })
                     }}
                   >

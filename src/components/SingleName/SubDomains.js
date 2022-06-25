@@ -38,7 +38,7 @@ function SubDomainsFromWeb3({ domain, canAddSubdomain }) {
           })
         const hasNoSubdomains = subdomains && subdomains.length === 0
         if (error) {
-          console.log('error getting subdomains', error)
+          console.error('error getting subdomains', error)
         }
         if (loading)
           return (

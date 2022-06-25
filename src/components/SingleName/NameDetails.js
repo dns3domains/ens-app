@@ -48,11 +48,11 @@ function NameDetails({
 
   const isDeedOwner = domain.deedOwner === account
 
-  console.log(
-    'domain.available, domain.registrant =',
-    domain.available,
-    domain.registrant
-  )
+  // console.log(
+  //   'domain.available, domain.registrant =',
+  //   domain.available,
+  //   domain.registrant
+  // )
   const isRegistrant = !domain.available && domain.registrant === account
 
   let dnssecmode, canSubmit
@@ -74,13 +74,13 @@ function NameDetails({
 
   let tld = globalUtils.getCurrentTld()
 
-  console.log(
-    '是否准备注册？',
-    domain.parent,
-    domain.parent === tld,
-    tab,
-    isAnAbsolutePath
-  )
+  // console.log(
+  //   '是否准备注册？',
+  //   domain.parent,
+  //   domain.parent === tld,
+  //   tab,
+  //   isAnAbsolutePath
+  // )
 
   if (domain.parent === tld && tab === 'register' && !isAnAbsolutePath) {
     return <Redirect to={`${pathname}/register`} />

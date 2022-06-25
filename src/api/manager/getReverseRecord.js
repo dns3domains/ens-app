@@ -43,7 +43,7 @@ export default async (_, { address }) => {
       }
     }
   } catch (e) {
-    console.log(e)
+    console.error(e)
     return {
       ...obj,
       name: null,

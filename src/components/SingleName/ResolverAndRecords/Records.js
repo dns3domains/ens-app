@@ -121,7 +121,7 @@ function isContentHashEmpty(hash) {
 }
 
 const useGetRecords = domain => {
-  console.log('useGetRecords()', domain, getNamehash(domain.name))
+  // console.log('useGetRecords()', domain, getNamehash(domain.name))
 
   const { data: dataResolver } = useQuery(GET_RESOLVER_FROM_SUBGRAPH, {
     variables: {
@@ -228,7 +228,7 @@ const getInitialTextRecords = (dataTextRecords, domain) => {
 }
 
 const getInitialRecords = (domain, dataAddresses, dataTextRecords) => {
-  console.log('getInitialRecords()', domain, dataAddresses, dataTextRecords)
+  // console.log('getInitialRecords()', domain, dataAddresses, dataTextRecords)
 
   const initialTextRecords = getInitialTextRecords(dataTextRecords, domain)
   const initialCoins = getInitialCoins(dataAddresses)
@@ -241,7 +241,7 @@ const getCoins = updatedRecords => {
   const result = updatedRecords
     .filter(record => record.contractFn === 'setAddr(bytes32,uint256,bytes)')
     .sort(record => (record.key === globalUtils.getCurrency() ? -1 : 1))
-  console.log('getCoins():', updatedRecords, result)
+  // console.log('getCoins():', updatedRecords, result)
   return result
 }
 

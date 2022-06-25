@@ -16,7 +16,7 @@ const resolvers = {
     async getEthPrice(_, {}) {
       const registrar = getRegistrar()
 
-      console.log('获取eth价格', registrar, await registrar.getEthPrice())
+      // console.log('获取eth价格', registrar, await registrar.getEthPrice())
 
       return registrar.getEthPrice()
     },
@@ -43,7 +43,7 @@ const resolvers = {
         const minCommitmentAge = await registrar.getMinimumCommitmentAge()
         return parseInt(minCommitmentAge)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     async getMaximumCommitmentAge() {
@@ -52,7 +52,7 @@ const resolvers = {
         const maximumCommitmentAge = await registrar.getMaximumCommitmentAge()
         return parseInt(maximumCommitmentAge)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     async checkCommitment(_, { label, secret }) {
@@ -61,7 +61,7 @@ const resolvers = {
         const commitment = await registrar.checkCommitment(label, secret)
         return parseInt(commitment)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     }
   },
@@ -127,7 +127,7 @@ const resolvers = {
 
         return data.domainState
       } catch (e) {
-        console.log('Error in getDomainAvailability', e)
+        console.error('Error in getDomainAvailability', e)
       }
     },
     async setRegistrant(_, { name, address }) {

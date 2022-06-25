@@ -97,7 +97,7 @@ export const handleSingleTransaction = async (
       coinRecord.value = emptyAddress
     }
 
-    console.log('coinRecord.value =', coinRecord.value)
+    // console.log('coinRecord.value =', coinRecord.value)
     if (!coinRecord.value || coinRecord.value === '') {
       addressAsBytes = Buffer.from('')
     } else {
@@ -170,14 +170,14 @@ export const handleMultipleTransactions = async (
     const tx1 = await resolverInstance.multicall(transactionArray)
     return sendHelper(tx1)
   } catch (e) {
-    console.log('error creating transaction array', e)
+    console.error('error creating transaction array', e)
   }
 }
 
 async function getRegistrarEntry(name) {
   const registrar = getRegistrar()
 
-  console.log('getRegistrarEntry() registrar =', name, registrar)
+  // console.log('getRegistrarEntry() registrar =', name, registrar)
 
   const nameArray = name.split('.')
 
@@ -193,7 +193,7 @@ async function getRegistrarEntry(name) {
 
   const entry = await registrar.getEntry(nameArray[0])
 
-  console.log('entry =', entry)
+  // console.log('entry =', entry)
 
   const {
     registrant,
@@ -256,19 +256,19 @@ async function getRegistrant(name) {
       }
     })
 
-    console.log('getRegistrant()', name, labelhash(name.split('.')[0]), data)
+    // console.log('getRegistrant()', name, labelhash(name.split('.')[0]), data)
 
     if (!data || !data.registration) {
       return null
     }
     if (error) {
-      console.log('Error getting registrant from subgraph', error)
+      console.error('Error getting registrant from subgraph', error)
       return null
     }
 
     return utils.getAddress(data.registration.registrant.id)
   } catch (e) {
-    console.log('GraphQL error from getRegistrant', e)
+    console.error('GraphQL error from getRegistrant', e)
     return null
   }
 }
@@ -287,7 +287,7 @@ async function setDNSSECTldOwner(ens, tld, networkId) {
 }
 
 async function getDNSEntryDetails(name) {
-  console.log('获取DNS相关')
+  // console.log('获取DNS相关')
 
   const ens = getENS()
   const registrar = getRegistrar()
@@ -377,7 +377,7 @@ const resolvers = {
           __typename: 'Resolver'
         }
       } catch (e) {
-        console.log('error getting public resolver', e)
+        console.error('error getting public resolver', e)
       }
     },
     getOwner: (_, { name }) => {
@@ -498,7 +498,7 @@ const resolvers = {
 
         return detailedNode
       } catch (e) {
-        console.log('Error in Single Name', e)
+        console.error('Error in Single Name', e)
         throw e
       }
     },
@@ -605,7 +605,7 @@ const resolvers = {
           __typename: 'SubDomains'
         }
       } catch (e) {
-        console.log('getSubDomains error: ', e)
+        console.error('getSubDomains error: ', e)
       }
     },
     getReverseRecord,
@@ -662,7 +662,7 @@ const resolvers = {
       try {
         balance = await provider.getBalance(address)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
       return balance
     }
@@ -679,7 +679,7 @@ const resolvers = {
         const tx = await ens.claimAndSetReverseRecordName(name)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setOwner: async (_, { name, address }) => {
@@ -688,7 +688,7 @@ const resolvers = {
         const tx = await ens.setOwner(name, address)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setSubnodeOwner: async (_, { name, address }) => {
@@ -697,7 +697,7 @@ const resolvers = {
         const tx = await ens.setSubnodeOwner(name, address)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setResolver: async (_, { name, address }) => {
@@ -706,7 +706,7 @@ const resolvers = {
         const tx = await ens.setResolver(name, address)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setAddress: async (_, { name, recordValue }) => {
@@ -715,7 +715,7 @@ const resolvers = {
         const tx = await ens.setAddress(name, recordValue)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setAddr: async (_, { name, key, recordValue }) => {
@@ -724,7 +724,7 @@ const resolvers = {
         const tx = await ens.setAddr(name, key, recordValue)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setContent: async (_, { name, recordValue }) => {
@@ -733,7 +733,7 @@ const resolvers = {
         const tx = await ens.setContent(name, recordValue)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setContenthash: async (_, { name, recordValue }) => {
@@ -742,7 +742,7 @@ const resolvers = {
         const tx = await ens.setContenthash(name, recordValue)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     setText: async (_, { name, key, recordValue }) => {
@@ -825,7 +825,7 @@ const resolvers = {
           // flatten textrecords and addresses and remove undefined
           return transactionArray.flat().filter(bytes => bytes)
         } catch (e) {
-          console.log('error creating transaction array', e)
+          console.error('error creating transaction array', e)
         }
       }
 
@@ -973,7 +973,7 @@ const resolvers = {
           return [value]
         }
       } catch (e) {
-        console.log('Error migrating resolver', e)
+        console.error('Error migrating resolver', e)
         throw e
       }
     },
@@ -984,7 +984,7 @@ const resolvers = {
         const tx = await ens.setSubnodeRecord(name, address, resolver)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     createSubdomain: async (_, { name }) => {
@@ -993,7 +993,7 @@ const resolvers = {
         const tx = await ens.createSubdomain(name)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     },
     deleteSubdomain: async (_, { name }) => {
@@ -1002,7 +1002,7 @@ const resolvers = {
         const tx = await ens.deleteSubdomain(name)
         return sendHelper(tx)
       } catch (e) {
-        console.log(e)
+        console.error(e)
       }
     }
   }

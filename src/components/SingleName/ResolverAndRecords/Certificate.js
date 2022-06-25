@@ -21,7 +21,7 @@ export function requestCertificate(name) {
       'Access-Control-Request-Method': 'PUT'
     }
   }).catch(e => {
-    console.log(e)
+    console.error(e)
   })
 }
 

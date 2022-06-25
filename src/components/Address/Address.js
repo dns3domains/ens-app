@@ -122,7 +122,7 @@ function normaliseAddress(address) {
 }
 
 function decryptNames(domains) {
-  console.log('decryptNames()', domains)
+  // console.log('decryptNames()', domains)
   return domains.map(d => {
     const name = decryptName(d.domain.name)
     return {
@@ -269,7 +269,7 @@ export default function Address({
   }, [isENSReady])
 
   if (error) {
-    console.log(error)
+    console.error(error)
     return <>Error getting domains. {JSON.stringify(error)}</>
   }
 

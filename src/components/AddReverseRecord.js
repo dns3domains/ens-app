@@ -158,7 +158,7 @@ function AddReverseRecord({ account, currentAddress }) {
     data: { networkId }
   } = useQuery(SINGLE_NAME)
 
-  console.log('networkId: ', networkId)
+  // console.log('networkId: ', networkId)
 
   const { data: { domains } = {}, refetch: refetchNames } = useQuery(
     GET_ETH_RECORD_AVAILABLE_NAMES_FROM_SUBGRAPH,
@@ -204,7 +204,7 @@ function AddReverseRecord({ account, currentAddress }) {
       return { value: d, label: d }
     })
 
-    console.log('options =', currentAddress, domains, options)
+    // console.log('options =', currentAddress, domains, options)
   }
 
   function handleSelect(e) {

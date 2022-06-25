@@ -85,7 +85,7 @@ const NavLink = styled(Link)`
 
   &:hover {
     span {
-      color: #5284ff;
+      color: #333333;
     }
     path {
       fill: #5284ff;
