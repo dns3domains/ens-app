@@ -1,4 +1,5 @@
 import { getNetwork, getNetworkId, isReadOnly } from '@ensdomains/ui'
+import { ensConfig } from 'ensConfig'
 import { setup as setupENS } from '../apollo/mutations/ens'
 import {
   isReadOnlyReactive,
@@ -23,7 +24,10 @@ const option = {
       package: () => import('@walletconnect/web3-provider'),
       packageFactory: true,
       options: {
-        infuraId: INFURA_ID
+        infuraId: INFURA_ID,
+        rpc: {
+          20: ensConfig.ens['20'].rpc
+        }
       }
     },
     walletlink: {
