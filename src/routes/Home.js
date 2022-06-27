@@ -21,7 +21,7 @@ import {
   DAOBannerContent
 } from '../components/Banner/DAOBanner'
 import { globalUtils } from 'globalUtils'
-import { getNetworkId, getWeb3 } from '@ensdomains/ui'
+import { getNetworkId } from '@ensdomains/ui'
 
 const HeroTop = styled('div')`
   display: grid;
@@ -363,7 +363,7 @@ export default ({ match }) => {
                 ]
               })
             } catch (e) {
-              console.log(e)
+              console.error(e)
             }
           }
         }
