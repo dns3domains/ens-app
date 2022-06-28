@@ -21,6 +21,7 @@ import {
   DAOBannerContent
 } from '../components/Banner/DAOBanner'
 import { globalUtils } from 'globalUtils'
+import { getNetworkId } from '@ensdomains/ui'
 
 const HeroTop = styled('div')`
   display: grid;
@@ -326,8 +327,52 @@ export default ({ match }) => {
       }
     }
 
+    const switchToElastosChain = async () => {
+      const currentChainId = await getNetworkId()
+      const escChainId = 20
+
+      if (currentChainId === escChainId) {
+        console.log('Current chain is ESC')
+      } else {
+        console.log('Current chain is not ESC')
+        try {
+          const provider = window.ethereum
+          await provider.request({
+            method: 'wallet_switchEthereumChain',
+            params: [{ chainId: '0x14' }]
+          })
+        } catch (e) {
+          console.error(e)
+          if (e.code === 4902) {
+            console.error('ESC chain is not supported')
+            try {
+              const provider = window.ethereum
+              await provider.request({
+                method: 'wallet_addEthereumChain',
+                params: [
+                  {
+                    chainId: '0x14',
+                    chainName: 'Elastos Smart Chain',
+                    rpcUrls: ['https://api.elastos.io/eth'],
+                    blockExplorerUrls: ['https://eth.elastos.io'],
+                    nativeCurrency: {
+                      symbol: 'ELA',
+                      decimals: 18
+                    }
+                  }
+                ]
+              })
+            } catch (e) {
+              console.error(e)
+            }
+          }
+        }
+      }
+    }
+
     setTimeout(() => {
       fetchBanners()
+      switchToElastosChain()
     }, 3000)
   }, [])
 
