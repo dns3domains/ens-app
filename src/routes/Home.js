@@ -333,8 +333,9 @@ export default ({ match }) => {
 
       if (
         currentChainId !== escChainId &&
-        window.localStorage.getItem(globalUtils.WANT_TO_SWITCH_NETWORK) ===
-          'false'
+        (window.localStorage.getItem(globalUtils.WANT_TO_SWITCH_NETWORK) ===
+          'false' ||
+          !window.localStorage.getItem(globalUtils.WANT_TO_SWITCH_NETWORK))
       ) {
         console.log('Current chain is not ESC')
         try {
