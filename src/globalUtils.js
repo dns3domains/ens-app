@@ -7,6 +7,7 @@ import TEXT_RECORD_KEYS from './constants/textRecords'
 export const globalUtils = {
   DNS_RECORDS: ['@A', '@MX', '@CNAME'],
   currentChainId: 0,
+  WANT_TO_SWITCH_NETWORK: 'wantToSwitchNetwork',
   getCurrentTld: function() {
     const theEnsConfig = ensConfig.ens[globalUtils.currentChainId]
     if (theEnsConfig) {

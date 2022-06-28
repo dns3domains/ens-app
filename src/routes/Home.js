@@ -331,9 +331,11 @@ export default ({ match }) => {
       const currentChainId = await getNetworkId()
       const escChainId = 20
 
-      if (currentChainId === escChainId) {
-        console.log('Current chain is ESC')
-      } else {
+      if (
+        currentChainId !== escChainId &&
+        window.localStorage.getItem(globalUtils.WANT_TO_SWITCH_NETWORK) ===
+          'false'
+      ) {
         console.log('Current chain is not ESC')
         try {
           const provider = window.ethereum
@@ -341,8 +343,10 @@ export default ({ match }) => {
             method: 'wallet_switchEthereumChain',
             params: [{ chainId: '0x14' }]
           })
+
+          window.localStorage.setItem(globalUtils.WANT_TO_SWITCH_NETWORK, true)
+          window.location.reload()
         } catch (e) {
-          console.error(e)
           if (e.code === 4902) {
             console.error('ESC chain is not supported')
             try {
@@ -365,6 +369,13 @@ export default ({ match }) => {
             } catch (e) {
               console.error(e)
             }
+          }
+
+          if (e.code === 4001) {
+            window.localStorage.setItem(
+              globalUtils.WANT_TO_SWITCH_NETWORK,
+              false
+            )
           }
         }
       }
