@@ -6,21 +6,21 @@ injectGlobal`
   }
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #F4F0dd;
+    background: #e7e7e7;
     margin: 0;
   }
 
   a {
-    color: #5284ff;
+    color: #0dac67;
     text-decoration: none;
     transition: 0.2s;
 
     &:hover {
-      color: #2C46A6;
+      color: #0dac67;
     }
 
     &:visited {
-      color: #333333
+      color: #0dac67
     } 
   }
 `

@@ -8,11 +8,10 @@ import mq from 'mediaQuery'
 
 import SearchDefault from '../components/SearchName/Search'
 import NoAccountsDefault from '../components/NoAccounts/NoAccountsModal'
-import bg from '../assets/heroBG.jpg'
 import TextBubbleDefault from '../components/Icons/TextBubble'
 import QuestionMarkDefault from '../components/Icons/QuestionMark'
 import HowToUseDefault from '../components/HowToUse/HowToUse'
-import ENSLogo from '../components/HomePage/images/ENSLogo.png'
+import ENSLogo from '../components/HomePage/images/ENSLogo.svg'
 import { aboutPageURL } from '../utils/utils'
 import { connectProvider, disconnectProvider } from '../utils/providerUtils'
 import { gql } from '@apollo/client'
@@ -49,7 +48,7 @@ const Name = styled('span')`
 `
 
 const NetworkStatus = styled('div')`
-  color: white;
+  color: black;
   font-weight: 200;
   text-transform: capitalize;
   display: none;
@@ -82,7 +81,7 @@ const Nav = styled('div')`
   `}
   a {
     font-weight: 300;
-    color: white;
+    color: black;
   }
 `
 
@@ -108,7 +107,7 @@ const Announcement = styled('div')`
   padding: 0 10px;
   border-bottom: #5284ff solid 3px;
   h3 {
-    color: white;
+    color: black;
     font-weight: 400;
     text-align: center;
     padding: 0 20px;
@@ -116,10 +115,10 @@ const Announcement = styled('div')`
   }
   p {
     text-align: center;
-    color: white;
+    color: black;
   }
   a {
-    color: white;
+    color: black;
     text-decoration: none;
   }
 `
@@ -129,7 +128,6 @@ const HowToUse = styled(HowToUseDefault)`
 `
 
 const Hero = styled('section')`
-  background: url(${bg});
   background-size: cover;
   padding: 60px 20px 20px;
   position: relative;
@@ -151,14 +149,14 @@ const SearchContainer = styled('div')`
     min-width: 60%;
   `}
   > h2 {
-    color: white;
+    color: black;
     font-size: 38px;
     font-weight: 100;
     margin-bottom: 10px;
   }
 
   > h3 {
-    color: white;
+    color: black;
     font-weight: 100;
     font-size: 24px;
     margin-top: 0;
