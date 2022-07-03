@@ -103,9 +103,9 @@ const Announcement = styled('div')`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #5284ff;
+  background: #0dac67;
   padding: 0 10px;
-  border-bottom: #5284ff solid 3px;
+  border-bottom: #0dac67 solid 3px;
   h3 {
     color: black;
     font-weight: 400;

@@ -47,16 +47,16 @@ function getButtonStyles({ type }) {
       `
     case 'hollow-primary':
       return `
-        color: #5384FE;
+        color: #0dac67;
         background: transparent;
-        border: 2px solid #5384FE;
+        border: 2px solid #0dac67;
         &:visited {
-          color: #5384FE;
+          color: #0dac67;
         }
         &:hover {
           cursor: pointer;
-          border: 2px solid #2C46A6;
-          color: #2C46A6;
+          border: 2px solid #0dac67;
+          color: #0dac67;
         }
       `
     case 'hollow-primary-disabled':
@@ -89,7 +89,7 @@ function getButtonStyles({ type }) {
 function getButtonDefaultStyles(p) {
   return `
     color: white;
-    background: #5384FE;
+    background: #0dac67;
     padding: 10px 25px;
     border-radius: 25px;
     font-size: 14px;
@@ -98,7 +98,7 @@ function getButtonDefaultStyles(p) {
     text-transform: capitalize;
     letter-spacing: 1.5px;
     transition: 0.2s all;
-    border: 2px solid #5384FE;
+    border: 2px solid #0dac67;
     text-align: center;
 
     &:focus {
