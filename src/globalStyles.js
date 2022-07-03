@@ -6,7 +6,7 @@ injectGlobal`
   }
   body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background: #e7e7e7;
+    background: #f8f9fb;
     margin: 0;
   }
 

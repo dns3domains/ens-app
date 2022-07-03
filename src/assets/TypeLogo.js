@@ -22,9 +22,7 @@ const TypeLogo = ({ color }) => (
       color: color,
       marginLeft: '8px'
     }}
-  >
-    DNS3
-  </span>
+  />
 )
 
 export default TypeLogo

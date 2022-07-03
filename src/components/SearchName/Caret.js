@@ -8,7 +8,7 @@ const CaretContainer = styled('div')`
   padding: 0 30px;
 
   g {
-    fill: #e7e7e7;
+    fill: #f8f9fb;
   }
 
   &:hover {
