@@ -19,8 +19,8 @@ const SortButton = styled('li')`
   &:hover,
   &.active {
     cursor: pointer;
-    color: #2c46a6;
-    border-bottom: 1px #2c46a6 solid;
+    color: #0dac67;
+    border-bottom: 1px #0dac67 solid;
   }
 `
 
