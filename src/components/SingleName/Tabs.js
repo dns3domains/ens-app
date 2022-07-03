@@ -8,7 +8,7 @@ import { globalUtils } from 'globalUtils'
 
 const TabLink = styled(Link)`
   font-size: 14px;
-  background: ${({ active }) => (active ? '#2C46A6' : 'transparent')};
+  background: ${({ active }) => (active ? '#0dac67' : 'transparent')};
   color: ${({ active }) => (active ? 'white' : '#D2D2D2')};
   transform: scale(${({ active }) => (active ? '1.08' : '1')});
   transition: background 0.1s ease-out, transform 0.3s ease-out;

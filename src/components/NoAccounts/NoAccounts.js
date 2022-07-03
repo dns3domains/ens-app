@@ -5,16 +5,12 @@ const NoAccountsContainer = styled('div')`
   box-shadow: ${({ active }) =>
     active ? '0 -10px 30px 0 rgba(108, 143, 167, 0.05)' : 'none'};
   padding: 5px 20px;
-  border-bottom: 1px solid
-    ${({ active, colour }) => (active ? '#F5A623' : colour)};
-  border-top: ${({ active, colour }) =>
-    `1px solid ${active ? '#fff' : colour}`};
-  border-left: ${({ active, colour }) =>
-    `1px solid ${active ? '#fff' : colour}`};
-  border-right: ${({ active, colour }) =>
-    `1px solid ${active ? '#fff' : colour}`};
+  border-bottom: #0dac67;
+  border-top: #0dac67;
+  border-left: #0dac67;
+  border-right: #0dac67;
   border-radius: ${({ active }) => (active ? '6px 6px 0 0' : '6px')};
-  background: ${({ active }) => (active ? 'white' : 'transparent')};
+  background: #0dac67;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -23,7 +19,7 @@ const NoAccountsContainer = styled('div')`
   transition: 0.2s;
 
   span {
-    color: ${({ active, colour }) => (active ? '#F5A623' : colour)};
+    color: #ffffff;
   }
 
   &:hover {

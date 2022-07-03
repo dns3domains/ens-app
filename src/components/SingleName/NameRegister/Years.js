@@ -21,10 +21,11 @@ const Icon = styled('div')`
   font-family: Overpass;
   font-size: 28px;
   font-weight: 100;
-  color: #adbbcd;
-  ${p => p.emphasize && 'background-color: #5384fe;'}
-  ${p => (p.emphasize ? 'color: white;' : 'color: #adbbcd;')}
-  ${p => (p.emphasize ? 'border-color: white;' : 'color: #adbbcd;')}
+  padding-top: 3pt;
+  color: #0dac67;
+  ${p => p.emphasize && 'background-color: #0dac67;'}
+  ${p => (p.emphasize ? 'color: white;' : 'color: #0dac67;')}
+  ${p => (p.emphasize ? 'border-color: white;' : 'color: #0dac67;')}
   
   border-radius: 50%;
   border: solid 1px;
@@ -37,8 +38,8 @@ const Icon = styled('div')`
   transition: 0.2s;
 
   &:hover {
-    border: solid #2500a6 1px;
-    color: #2500a6;
+    border: solid #ffa600 1px;
+    color: #ffa600;
     cursor: pointer;
   }
 `

@@ -3,13 +3,13 @@ import styled from '@emotion/styled/macro'
 import { Link } from 'react-router-dom'
 import mq from 'mediaQuery'
 
-import ENSLogo from '../assets/ensIconLogo.png'
+import ENSLogo from '../assets/ENSLogo.svg'
 import LogoTyped from '../assets/TypeLogo'
 
 const IconLogo = styled('img')`
   width: 30px;
   ${mq.medium`
-    width: 34px
+    width: 134px
   `}
 `
 

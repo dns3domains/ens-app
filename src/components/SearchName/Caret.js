@@ -8,7 +8,7 @@ const CaretContainer = styled('div')`
   padding: 0 30px;
 
   g {
-    fill: #e7e7e7;
+    fill: #f8f9fb;
   }
 
   &:hover {
@@ -16,7 +16,7 @@ const CaretContainer = styled('div')`
 
     g {
       transition: fill 0.2s ease-out, transform 0.2s ease-out;
-      fill: #5284ff;
+      fill: #0dac67;
     }
   }
 
