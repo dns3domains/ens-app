@@ -174,14 +174,10 @@ function SideNav({ match, isMenuOpen, toggleMenu }) {
           </NavLink>
         </li>
         <li>
-          <NavLink
-            onClick={toggleMenu}
-            active={url === '/faq' ? 1 : 0}
-            to="/faq"
-          >
-            <FaqIcon />
+          <ThirdPartyLink href="https://mirror.xyz/beagles.eth/k39h--9V0AdQxWgXueH4DV0vwluv8Qz8fpcdepM4LvQ">
+            <Info />
             <span>{t('c.faq')}</span>
-          </NavLink>
+          </ThirdPartyLink>
         </li>
         <li>
           <ThirdPartyLink href={aboutPageURL()}>
