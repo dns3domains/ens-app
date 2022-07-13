@@ -370,8 +370,10 @@ export default ({ match }) => {
 
     setTimeout(() => {
       fetchBanners()
+      console.log('fetchBanners()')
       switchToElastosChain()
-    }, 3000)
+      console.log('switchToElastosChain()')
+    }, 1000)
   }, [])
 
   return (
